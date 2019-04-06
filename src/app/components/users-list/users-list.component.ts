@@ -60,7 +60,6 @@ export class UsersListComponent implements OnInit {
     this.dataService.cachedData[page] = {};
     this.dataService.cachedData[page].paging = this.paging;
     this.dataService.cachedData[page].users = this.users;
-    console.log(this.dataService.cachedData);
   }
 
   ngOnInit() {
