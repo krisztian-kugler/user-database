@@ -1,0 +1,21 @@
+<section class="paging">
+  <div class="container">
+    <p *ngIf="loading" class="info">Loading...</p>
+    <p *ngIf="!loading" class="info">Page {{ paging.current }} / {{ paging.total }}</p>
+    <div class="buttons">
+      <button class="prev" [ngClass]="{ disabled: !paging.prev }" (click)="turnPage(paging.prev)"><i class="fas fa-chevron-left"></i>Prev</button>
+      <div class="divider"></div>
+      <button class="next" [ngClass]="{ disabled: !paging.next }" (click)="turnPage(paging.next)">Next<i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<section class="users">
+  <ng-template *ngIf="loading; then spinner; else content"></ng-template>
+  <ng-template #spinner>
+    <app-spinner></app-spinner>
+  </ng-template>
+  <ng-template #content>
+    <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+  </ng-template>
+</section>

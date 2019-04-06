@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700')
+
+$header-height: 200px
+$color-main: #282c34
+$color-main-dark: #20232a
+$color-accent: #61dafb
+
+@mixin button($color)
+  display: flex
+  border: none
+  outline: none
+  background-color: transparent
+  color: $color
+  font-family: Lato, sans-serif
+  font-size: 16px
+  cursor: pointer
+
+  &:hover
+    color: $color-accent

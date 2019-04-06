@@ -1,0 +1,33 @@
+@import ../../../../assets/sass/init
+
+\:host
+  display: flex
+  padding: 15px
+  border-radius: 5px
+  border: 1px solid rgb(217, 217, 217)
+  cursor: pointer
+  transition: border-color 250ms
+
+  &:hover
+    border-color: $color-main
+
+  &:not(:last-child)
+    margin-bottom: 15px
+
+  .avatar
+    align-self: center
+    width: 128px
+    height: 128px
+    margin-right: 30px
+
+  .username
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    .first-name
+      font-size: 32px
+
+    .last-name
+      font-size: 24px
+      font-weight: normal

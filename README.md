@@ -1,6 +1,12 @@
-# UserDatabase
+# User Database
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+## Notes
+
+- Implemented the optional caching feature: every visited page is stored in a cache object in the data service.
+- Added load spinner when fetching data from the API.
+- Page buttons get disabled if there are no more pages.
 
 ## Development server
 
